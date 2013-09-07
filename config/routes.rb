@@ -18,8 +18,8 @@ SampleApp::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-  match '/signup',   to: 'users#new'
-  match '/signin',   to: 'sessions#new'
+  match '/signup',   to: 'auth#home'
+  match '/signin',   to: 'auth#home'
   match '/signout',  to: 'sessions#destroy', via: :delete
 
   match '/help',    to: 'static_pages#help'

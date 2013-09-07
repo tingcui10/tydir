@@ -25,9 +25,8 @@ class AuthController < ApplicationController
       client.authorize_from_access(session[:atoken], session[:asecret])
     end
   	#provides the ability to access authenticated user's company field in the profile %>
- 	user = client.profile(:fields => %w(positions))
-	companies = user.positions.all.map{|t| t.company}
-	render 'profile'
+ 	@user = client.profile(:fields => %w(positions))
+	@companies = @user.positions.all.map{|t| t.company}
   end
 
   def upload
