@@ -15,6 +15,19 @@ class AuthController < ApplicationController
   end
 
   def profile
+  	client = LinkedIn::Client.new("lls9zleu6cum", "5b4SDtNQEq2krdOX")
+    if session[:atoken].nil?
+      pin = params[:oauth_verifier]
+      atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
+      session[:atoken] = atoken
+      session[:asecret] = asecret
+    else
+      client.authorize_from_access(session[:atoken], session[:asecret])
+    end
+  	#provides the ability to access authenticated user's company field in the profile %>
+ 	user = client.profile(:fields => %w(positions))
+	companies = user.positions.all.map{|t| t.company}
+	render 'profile'
   end
 
   def upload
