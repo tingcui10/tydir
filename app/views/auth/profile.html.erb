@@ -1,4 +1,11 @@
 <h1>Auth#profile</h1>
 <p>Find me in app/views/auth/profile.html.erb</p>
 Profile data:
-<%= :companies[0] %>
+<p>
+	From 'client.profile(:fields => %w(positions))':<br>
+	<%= @user.inspect %>
+</p>
+<p>
+	From 'client.profile.positions.all.map{|t| t.company}':<br>
+	<%= @companies.inspect %>
+</p>
