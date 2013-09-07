@@ -1,4 +1,12 @@
 SampleApp::Application.routes.draw do
+  get "auth/home"
+
+  get "auth/profile"
+
+  get "auth/upload"
+
+  get "auth/callback"
+
   resources :users do
     member do
       get :following, :followers
@@ -17,6 +25,8 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+
+  #match '/auth',     to: 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
