@@ -43,6 +43,7 @@ class AuthController < ApplicationController
       client.authorize_from_access(session[:atoken], session[:asecret])
     end
     @profile = client.profile
+    client.profile.ur
     @connections = client.connections
   end
 end
