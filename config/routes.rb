@@ -11,6 +11,10 @@ SampleApp::Application.routes.draw do
 
   get "auth/logout"
    
+  get "auth/finance"
+  get "auth/marketing"
+  get "auth/consulting"
+  get "auth/tech"
  
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]

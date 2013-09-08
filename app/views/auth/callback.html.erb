@@ -1,7 +1,6 @@
 <ul class="breadcrumb">
-  <li><a href="#">Home</a> <span class="divider">/</span></li>
-  <li><a href="#">Library</a> <span class="divider">/</span></li>
-  <li class="active">Data</li>
+  <li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li><a href="/auth/callback">Main Page</a> <span class="divider">/</span></li>
 </ul>
 
 
@@ -14,21 +13,27 @@
   <table>
     <tr>
       	<th>
-			<%= raw(youtube_embed('http://www.youtube.com/watch?v=wqks_R90ykI')) %> <br>
-			<h1> Finance </h1>
-		</th>
-		<th>
-			<%= raw(youtube_embed('youtu.be/jJrzIdDUfT4')) %><br>
-			<h1> Marketing </h1>
-		</th>
-		<th>
-			<%= raw(youtube_embed('youtu.be/jJrzIdDUfT4')) %><br>
-			<h1> Consulting </h1>
+			 <img class="fixed" src="/coffee2.jpg" width="100%"><br>
+			<h1> <%=link_to "Finance", "/auth/finance"%></h1>
+
 		</th>
 		
 		<th>
-			<%= raw(youtube_embed('youtu.be/jJrzIdDUfT4')) %><br>
-			<h1> Tech </h1>
+			<%= raw(youtube_embed('http://www.youtube.com/watch?v=wqks_R90ykI')) %> <br>
+			<h1> <%=link_to "Marketing", "/auth/marketing"%></h1>
+
+		</th>
+
+		<th>
+			<%= raw(youtube_embed('http://www.youtube.com/watch?v=wqks_R90ykI')) %> <br>
+			<h1> <%=link_to "Consulting", "/auth/consulting"%></h1>
+
+		</th>
+
+		<th>
+			<%= raw(youtube_embed('http://www.youtube.com/watch?v=wqks_R90ykI')) %> <br>
+			<h1> <%=link_to "Tech", "/auth/tech"%></h1>
+
 		</th>
 	</tr>
 </table>

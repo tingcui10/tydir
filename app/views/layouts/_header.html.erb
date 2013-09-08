@@ -7,6 +7,7 @@
           <li><%= link_to "Home",    root_path %></li>
           <li><%= link_to "About",    help_path %></li>
           <% if !(session[:atoken].nil?) %>
+          <li><%= link_to "Main Page",    "/auth/callback" %></li>
             
           <li><%= link_to "Sign out", "/auth/logout" %>
                 </li>
