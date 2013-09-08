@@ -44,7 +44,7 @@ class AuthController < ApplicationController
   end
 
   def callback
-    client = LinkedIn::Client.new("lls9zleu6cum", "5b4SDtNQEq2krdOX")
+    client = LinkedIn::Client.new("spjfk69deqdq", "XbSoycthjfePvRPS")
     if session[:atoken].nil?
       pin = params[:oauth_verifier]
       atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
@@ -54,7 +54,7 @@ class AuthController < ApplicationController
       client.authorize_from_access(session[:atoken], session[:asecret])
     end
     @profile = client.profile
-    client.profile.ur
+    # client.profile.ur
     @connections = client.connections
   end
 end
