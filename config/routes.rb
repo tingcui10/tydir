@@ -7,6 +7,8 @@ SampleApp::Application.routes.draw do
 
   get "auth/callback"
 
+  get "auth/carousel"
+
    
  
   resources :sessions, only: [:new, :create, :destroy]
