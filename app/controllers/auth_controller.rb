@@ -4,7 +4,7 @@ class AuthController < ApplicationController
 
   def home
     # get your api keys at https://www.linkedin.com/secure/developer
-    client = LinkedIn::Client.new("lls9zleu6cum", "5b4SDtNQEq2krdOX")
+    client = LinkedIn::Client.new("spjfk69deqdq", "XbSoycthjfePvRPS")
     request_token = client.request_token(:oauth_callback =>
                                       "http://#{request.host_with_port}/auth/callback")
     session[:rtoken] = request_token.token
@@ -15,7 +15,7 @@ class AuthController < ApplicationController
   end
 
   def logout
-    client = LinkedIn::Client.new("lls9zleu6cum", "5b4SDtNQEq2krdOX")
+    client = LinkedIn::Client.new("spjfk69deqdq", "XbSoycthjfePvRPS")
     if session[:atoken].nil?
      #signed out already
     else
@@ -26,7 +26,7 @@ class AuthController < ApplicationController
 
 
   def profile
-  	client = LinkedIn::Client.new("lls9zleu6cum", "5b4SDtNQEq2krdOX")
+  	client = LinkedIn::Client.new("spjfk69deqdq", "XbSoycthjfePvRPS")
     if session[:atoken].nil?
       pin = params[:oauth_verifier]
       atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
