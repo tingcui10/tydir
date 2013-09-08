@@ -1,7 +1,29 @@
 <ul class="breadcrumb">
-  <li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li><a href="/auth/callback">Main Page</a> <span class="divider">/</span></li>
-  <li class="active">Finance</li>
+	<table>
+		<tr>
+			<td>
+ 				<li><a href="/">Home</a> <span class="divider">/</span></li>
+  			</td>
+  			<td>
+  				<li><a href="/auth/callback">Main Page</a> <span class="divider">/</span></li>
+ 			</td>
+ 			<td>
+				<li>
+					<span class="btn-group">
+				  	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    Finance
+				    <span class="caret"></span>
+				     <ul class="dropdown-menu">
+				        <li><a href="#IB">Investment Banking </a></li>
+				        <li><a href="#ST">Sales & Trading </a></li>
+				        <li><a href="#">Asset Management</a></li>
+				 	</ul>
+				  	</a>
+					</span>
+				</li>
+			</td>
+		</tr>
+	</table>
 </ul>
 
 
@@ -10,7 +32,7 @@
 <div class="container">
 	<section style="height: 400px">
 
-		<%= raw(youtube_embed('http://www.youtube.com/watch?v=wqks_R90ykI')) %> 
+		<%= raw(youtube_embed_wide('http://www.youtube.com/watch?v=wqks_R90ykI')) %> 
 		
 
 		<div class="row">
@@ -21,25 +43,74 @@
 				}
 				</style>
 				<br>
-			
 			</div>	
 		</div>
 
 	</section>	
+
 </div>
+
+<section style="height: 200px">
+	<br>
 <div class="btn-group">
   <a class="btn dropdown-toggle btn-large btn-primary" data-toggle="dropdown" href="#">
-    Learn more
+    Learn more	
     <span class="caret"></span>
   </a>
+
+
+
   <ul class="dropdown-menu">
     <!-- dropdown menu links -->
 
     <ul class="dropdown-menu">
-        <li><a href="#">second link </a></li>
-        <li><a href="#">third link </a></li>
-      </ul>
+        <li><a href="#">Investment Banking </a></li>
+        <li><a href="#">Sales & Trading </a></li>
+        <li><a href="#">Asset Management</a></li>
+    </ul>
     
+
   </ul>
 </div>
+</section>
+
+
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="span6">
+				<section style="height: 400px; width: 550px">
+					<div class="span6">
+						<a name="IB"></a>
+						<h2> Investment Banking </h2><br>
+					</div>
+					<%= raw(youtube_embed('http://www.youtube.com/watch?v=wqks_R90ykI')) %> 
+				</section>
+			</div>
+			<div class="span6">
+				<section style="height: 400px; width: 550px">
+					<div class="span5">
+						<a name="ST"></a>
+						<h2> Sales & Trading </h2><br>
+					</div>
+					<%= raw(youtube_embed('http://www.youtube.com/watch?v=wqks_R90ykI')) %> 
+				</section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12" id='yt_player'>	
+				<style>
+				iframe {
+					height: 100%;
+				}
+				</style><br>
+			</div>	
+
+		</div>
+	</div>
+</section>	
+
+  <br>
+
 
