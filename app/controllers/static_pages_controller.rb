@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def home
 
    
-
+user_signed_in = !session[:atoken].nil?
 
 
   end

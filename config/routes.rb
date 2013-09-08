@@ -9,6 +9,7 @@ SampleApp::Application.routes.draw do
 
   get "auth/carousel"
 
+  get "auth/logout"
    
  
   resources :sessions, only: [:new, :create, :destroy]

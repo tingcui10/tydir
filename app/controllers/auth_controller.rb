@@ -14,6 +14,17 @@ class AuthController < ApplicationController
 
   end
 
+  def logout
+    client = LinkedIn::Client.new("lls9zleu6cum", "5b4SDtNQEq2krdOX")
+    if session[:atoken].nil?
+     #signed out already
+    else
+      session[:atoken] = nil
+      redirect_to root_path
+    end
+  end
+
+
   def profile
   	client = LinkedIn::Client.new("lls9zleu6cum", "5b4SDtNQEq2krdOX")
     if session[:atoken].nil?
